@@ -1,0 +1,93 @@
+{% extends 'home/base.html' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      {% block title %}  <title> Delhi</title> {% endblock %}
+  </head>
+  <body>
+  {% block body %}
+    <h1>{{cities.City}}</h1>
+    <ul>
+      {% for hotel in cities.Hotels_set.all %}
+      <li>{{hotel.hotel_name}} - $ {{hotel.cost}}</li>
+      {% endfor %}
+    </ul>
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Delhi</h1>
+          <p class="lead text-muted">India's capital city.</p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top"  style="height: 225px; width: 100%; display: block;" src="https://www.safarihotelsnamibia.com/wp-content/uploads/2014/11/Safari-Court-Hotel-Pool.jpg" data-holder-rendered="true">
+                <br>
+                <div class="card-body">
+                  <p class="card-text" style="font-size:20px;"><strong>Hotel A</strong></p><p>Luxury</p>
+                  <small class="text-muted">₹2000</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" style="margin-top:7px;" class="btn btn-sm btn-success">Book</button>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top"  style="height: 225px; width: 100%; display: block;" src="http://www.mytraveldesk.in/hotel.html%20pictures/chatur%20musafir.jpg" data-holder-rendered="true">
+                <br>
+                <div class="card-body">
+                  <p class="card-text" style="font-size:20px;"><strong>Hotel B</strong></p><p>Deluxe</p>
+                  <small class="text-muted">₹1750</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" style="margin-top:7px;" class="btn btn-sm btn-success">Book</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top"  style="height: 225px; width: 100%; display: block;" src="https://t-ec.bstatic.com/images/hotel/max1024x768/809/80944958.jpg" data-holder-rendered="true">
+                <br>
+                <div class="card-body">
+                  <p class="card-text" style="font-size:20px;"><strong>Hotel C</strong></p><p>Semi-Deluxe</p>
+                  <small class="text-muted">₹1500</small>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" style="margin-top:7px;" class="btn btn-sm btn-success">Book</button>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+
+
+
+
+    {% endblock %}
+  </body>
+</html>

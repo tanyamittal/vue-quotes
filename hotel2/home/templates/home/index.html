@@ -1,0 +1,52 @@
+<!DOCTYPE html> {% extends 'home/base.html' %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Boyo</title>
+</head>
+
+<body>
+  {% block body %}
+  <div class="album-container container-fluid">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Hotel Booking</h1>
+        <p>Going somewhere? Book a hotel!</p1>
+      </div>
+    </div>
+    <div class="container">
+      <form class="form-group" action="#" method="post">
+        {% csrf_token %}
+        <div class="row search-hotel">
+          <div class="col-sm-4">
+            <label for="City"><span class="glyphicon glyphicon-home" style="margin-right:5px;"></span>City</label>
+            <select class="select form-control" name="destination">
+              {% for citi in cities %}
+                <option value="{{ citi.pk }}">{{ citi.city }}</option>
+            {% endfor %}
+            </select>
+          </div>
+          <div class="col-sm-4">
+            <label for="arr_date"><span class="glyphicon glyphicon-calendar" style="margin-right:5px;"></span>Check-In:</label>
+            <input type="date" name="arr_date" class="form-control">
+          </div>
+          <div class="col-sm-4">
+            <label for="dep_date"><span class="glyphicon glyphicon-calendar" style="margin-right:5px;"></span>Check-Out:</label>
+            <input type="date" name="arr_date" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <button type="submit" class="btn btn-info form-control" style="margin-top:50px; width:40%; margin-left:345px; ;">
+          <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

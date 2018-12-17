@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  {% block title %}  <title>BOYO</title> {% endblock %}
+    {% load staticfiles %}
+      <link rel="shortcut icon" type="image/png" href="favicon.png">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!--logo-->
+        <div class="navbar-header">
+
+          <button type="button" name="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">BOYO</a>
+
+          <!--items-->
+          <div class="collapse navbar-collapse" id="topNavBar">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </nav>
+{% block body %}
+{% endblock %}
+  </body>
+</html>

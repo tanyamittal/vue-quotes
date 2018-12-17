@@ -1,0 +1,14 @@
+.center-block {
+   width:250px;
+   padding:10px;
+   background-color:#eceadc;
+   color:#ec8007
+   }
+#search-hotel
+{
+  font-size: 200px;
+}
+#headingCity
+{
+  background-color: red;
+}
